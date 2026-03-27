@@ -1,14 +1,14 @@
 # Tiny Tapeout project information
 project:
-  title:        "half adder"      # Project title
-  author:       "Devanandan"      # Your name
+  title:        "UART Transciever"      # Project title
+  author:       "Dhanith Krishnan M, Devanandan H, Aiswarya A S, Fahd Ali Ansari"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Performs half adder operation"      # One line description of what your project does
+  description:  "Recives and transmits UART signal"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+  clock_hz:     50      # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
-  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+  tiles: "1x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
 
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
   top_module:  "tt_um_vlsi"
@@ -20,26 +20,27 @@ project:
     - "project.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: "a"
-  ui[1]: "b"
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
+  ui[0]: "tx_data[0]"
+  ui[1]: "tx_data[1]"
+  ui[2]: "tx_data[2]"
+  ui[3]: "tx_data[3]"
+  ui[4]: "tx_data[4]"
+  ui[5]: "tx_data[5]"
+  ui[6]: "tx_data[6]"
+  ui[7]: "tx_data[7]"
 
   # Outputs
-  uo[0]: "sum"
-  uo[1]: "carryout"
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "rx_data[0]"
+  uo[1]: "rx_data[1]"
+  uo[2]: "rx_data[2]"
+  uo[3]: "rx_data[3]"
+  uo[4]: "rx_data[4]"
+  uo[5]: "rx_data[5]"
+  uo[6]: "rx_data[6]"
+  uo[7]: "rx_data[7]"
 
   # Bidirectional pins
   uio[0]: ""
